@@ -1,0 +1,58 @@
+body {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    width: 450px;
+    margin: 50px auto;
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h2 {
+    color: #333333; /* Texto negro */
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input__text {
+    width: calc(100% - 22px); /* Ajusta el ancho para compensar el padding y el borde */
+    padding: 10px;
+    border: 1px solid #cccccc; /* Borde gris claro */
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px; /* Espaciado inferior */
+    box-sizing: border-box; /* Hace que el padding y el borde se incluyan en el ancho total */
+}
+
+.btn__group {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn_danger {
+    background-color: #dc3545; /* Rojo oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
+.btn__primary {
+    background-color: #007bff; /* Azul primario */
+    color: #ffffff; /* Texto blanco */
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
