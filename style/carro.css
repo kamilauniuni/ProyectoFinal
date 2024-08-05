@@ -1,0 +1,172 @@
+  
+.titulo .h3{
+  text-align:left;}
+
+.product {
+  border: 1px solid #333; 
+  border-radius: 5px; 
+  padding: 10px; 
+  margin-top: -10px;  /* Margen superior */
+  margin-right: 20px; /* Margen derecho */
+  margin-bottom: 100px; /* Margen inferior */
+  margin-left: 20px; /* Margen izquierdo */
+  text-align: center; 
+  width: 20%; 
+  display: inline-block;
+}
+/* Estilo para las imágenes de los productos */
+.product img {
+    width: 100px; 
+    height: 100px; 
+    border-bottom: 1px solid #333; 
+    margin-bottom: 10px; 
+}
+/* Opcional: Estilo para el contenedor del carrito */
+.cart-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+/* Opcional: Estilo para el botón del carrito */
+#cart-icon {
+    font-size: 18px;
+    text-decoration: none;
+    color:red;
+}
+/* boton carro de compras*/
+.button {
+  --width: auto; /* Define el ancho del boton */
+  --height: 45px; /* Define la altura del botón  */
+  --tooltip-height: 40px; /* Define la altura del tooltip . */
+  --tooltip-width: 90px; /* Define el ancho del tooltip  */
+  --gap-between-tooltip-to-button: 20px; /* Define el espacio entre el tooltip y el botón */
+  --button-color: #222; /* Define el color de fondo del botón  */
+  --tooltip-color: #fff; /* Define el color del texto del tooltip  */
+  width: var(--width); /* Establece el ancho del botón utilizando la variable definida. */
+  height: var(--height); /* Establece la altura del botón utilizando la variable definida. */
+  background: var(--button-color); /* Aplica el color de fondo del botón utilizando la variable definida. */
+  position: relative; /* Posiciona el botón de manera relativa para que los elementos pseudo*/
+  text-align: center; /* Centra el texto dentro del botón. */
+  border-radius:-100em; /* Redondea las esquinas del botón. */
+  font-family: "Arial"; /* Define la fuente del texto dentro del botón  */
+  transition: background 0.3s; /* Añade una transición suave para el cambio de color de fondo del botón durante 0.3 segundos. */
+}
+.button::before {
+  position: absolute; /* Posiciona el pseudo-elemento ::before de manera absoluta con respecto al botón. */
+  content: attr(data-tooltip); /* Utiliza el atributo data-tooltip del botón  */
+  width: var(--tooltip-width); /* Establece el ancho del tooltip utilizando la variable definida. */
+  height: var(--tooltip-height); /* Establece la altura del tooltip utilizando la variable definida. */
+  background-color: #555; /* Define el color de fondo del tooltip  */
+  font-size: 0.9rem; /* Define el tamaño de fuente del texto del tooltip  */
+  color: #fff; /* Define el color del texto del tooltip */
+  border-radius: .25em; /* Redondea las esquinas del tooltip. */
+  line-height: var(--tooltip-height); /* Alinea verticalmente el texto en el centro del tooltip. */
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px); /* Posiciona el tooltip por debajo del botón, sumando el espacio entre el botón y el tooltip más 10 píxeles. */
+  left: calc(50% - var(--tooltip-width) / 2); /* Centra horizontalmente el tooltip con respecto al botón. */
+}
+.button::after {
+  position: absolute; /* Posiciona el pseudo-elemento ::after de manera absoluta con respecto al botón. */
+  content: ''; /* No tiene contenido visible; se usa para crear una flecha o triángulo. */
+  width: 0; /* Establece el ancho del triángulo a 0. */
+  height: 0; /* Establece la altura del triángulo a 0. */
+  border: 10px solid transparent; /* Crea un triángulo con bordes transparentes. */
+  border-top-color: #555; /* Define el color del borde superior del triángulo como  */
+  left: calc(50% - 10px); /* Centra horizontalmente el triángulo con respecto al botón. */
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px); /* Posiciona el triángulo justo por debajo del borde inferior del botón más el espacio entre el tooltip y el botón menos 10 píxeles. */
+}
+.button::after, .button::before {
+  opacity: 0; /* Inicialmente establece la opacidad de los pseudo-elementos ::after y ::before a 0 (invisibles). */
+  visibility: hidden; /* Inicialmente oculta los pseudo-elementos ::after y ::before. */
+  transition: all 0.5s; /* Añade una transición suave para todas las propiedades durante 0.5 segundos. */
+}
+.text {
+  display: flex; /* Usa flexbox para alinear el contenido dentro del elemento .text. */
+  align-items: center; /* Centra verticalmente el contenido del elemento .text. */
+  justify-content: center; /* Centra horizontalmente el contenido del elemento .text. */
+}
+.button-wrapper, .text, .icon {
+  overflow: hidden; /* Oculta el contenido que se desborda del contenedor. */
+  position: absolute; /* Posiciona estos elementos de manera absoluta con respecto al contenedor padre. */
+  width: 100%; /* Establece el ancho de estos elementos al 100% del contenedor padre. */
+  height: 100%; /* Establece la altura de estos elementos al 100% del contenedor padre. */
+  left: 0; /* Posiciona estos elementos en el borde izquierdo del contenedor padre. */
+  color: #fff; /* Define el color del texto dentro de estos elementos como blanco (#fff). */
+}
+.text {
+  top: 0; /* Posiciona el elemento .text en la parte superior del contenedor padre. */
+}
+.text, .icon {
+  transition: top 0.5s; /* Añade una transición suave para el cambio de posición vertical durante 0.5 segundos. */
+}
+.icon {
+  color: #555; /* Define el color del texto dentro del elemento .icon como blanco (#fff). */
+  top: 100%; /* Posiciona el elemento .icon fuera de la vista inicial en la parte inferior del contenedor. */
+  display: flex; /* Usa flexbox para alinear el contenido dentro del elemento .icon. */
+  align-items: center; /* Centra verticalmente el contenido del elemento .icon. */
+  justify-content: center; /* Centra horizontalmente el contenido del elemento .icon. */
+}
+.icon svg {
+  width: 24px; /* Define el ancho de los iconos SVG dentro del elemento .icon como 24 píxeles. */
+  height: 24px; /* Define la altura de los iconos SVG dentro del elemento .icon como 24 píxeles. */
+}
+.button:hover {
+  background: #222; /* Cambia el color de fondo del botón a gris oscuro (#222) cuando el ratón pasa sobre él. */
+}
+.button:hover .text {
+  top: -100%; /* Mueve el texto fuera de la vista hacia arriba cuando el ratón pasa sobre el botón. */
+}
+.button:hover .icon {
+  top: 0; /* Mueve el icono hacia arriba a la vista cuando el ratón pasa sobre el botón. */
+}
+.button:hover::before, .button:hover::after {
+  opacity: 1; /* Hace visibles los pseudo-elementos ::before y ::after cuando el ratón pasa sobre el botón. */
+  visibility: visible; /* Muestra los pseudo-elementos ::before y ::after cuando el ratón pasa sobre el botón. */
+}
+.button:hover::after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px); /* Ajusta la posición vertical del triángulo para que esté más cerca del botón cuando el ratón pasa sobre él. */
+}
+.button:hover::before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button)); /* Ajusta la posición vertical del tooltip para que esté más cerca del botón cuando el ratón pasa sobre él. */
+}
+
+/* barra de navegacion */
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #f8f9fa; /* Color de fondo de la barra de navegación */
+    padding: 10px; /* Espacio interno alrededor del contenido */
+}
+
+/* Estilos para el contenedor del formulario */
+.container-fluid {
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: flex-start; /* Alinear elementos al inicio del contenedor (izquierda) */
+}
+
+/* Estilos para el formulario de búsqueda */
+.d-flex {
+    display: flex; /* Usar flexbox para el formulario */
+    align-items: center; /* Centrar verticalmente los elementos dentro del formulario */
+}
+
+/* Estilos para el campo de búsqueda */
+.form-control {
+    border-radius: 3px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+    padding: 8px; /* Espacio interno en el campo de búsqueda */
+    margin-right: 10px; /* Espacio entre el campo de búsqueda y el botón */
+}
+
+/* Estilos para el botón de búsqueda */
+.btn-outline-success {
+    border-radius: 3px; /* Bordes redondeados */
+    border: 1px solid #28a745; /* Borde verde */
+    color: #28a745; /* Color del texto del botón */
+    padding: 8px 16px; /* Espacio interno del botón */
+}
+
+/* Estilos para el botón de búsqueda al pasar el cursor sobre él */
+.btn-outline-success:hover {
+    background-color: #28a745; /* Fondo verde al pasar el cursor */
+    color: #fff; /* Color del texto en blanco al pasar el cursor */
+}
+

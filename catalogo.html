@@ -1,173 +1,230 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Supermercados Osmar - Your one-stop shop for all your daily needs.">
+
     <title>Supermercados Osmar</title>
-    <link rel="stylesheet" href="stilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="app.js" async></script>
+    <link rel="stylesheet" href="style/stilos.css">
+    <link rel="stylesheet" href="style/carro.css">
+    <link rel="stylesheet" href="style/catalogo.css">
+    <link rel="stylesheet" href="style/botoncarro.css">
+    <!--<link  rel="stylesheet" href="style/responsive.css" type="text/css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="stilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
 </head>
 <body>
-  <header>
-    <div class="titulo">
-      <h1>SupermercadosOsmar
-          <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
-      </h1>
-      <div class="menu">
-          <nav class="navbar navbar-expand-lg bg-body">
-              <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                      <ul class="navbar-nav">
-                          <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="index.html">Hogar</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="catalogo.html">Catálogo</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="sobreNosotros.html">Quiénes somos</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="contactanos.html">Contáctenos</a>
-                          </li>
-                          <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  <img src="img/perfil8.png" alt="" class="usuario" style="vertical-align: middle; width: 25px; height: 25px;">
-                              </a>
-                              <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="login/login.php">Iniciar sesión</a></li>
-                                  <li><a class="dropdown-item" href="index.html">Salir</a></li>
-                              </ul>
-                          </li>
-                      </ul>
-                      <img src="img/carro-de-la-compra.png" alt="Icono de Carrito" class="cart-icon" style="vertical-align: middle; width: 25px; height: 25px;">
-                  </div>
-              </div>
-          </nav>
-      </div>
+<header>
+  <div class="contenedorglobal">
+    <header>
+    <div class="container-fluid bg-white">
+        <div class="row align-items-center">
+        <div class="container-fluid bg-white">
+       <div class="row align-items-center">
+           <div class="col-12 col-md-6 text-start">
+            <h1 class="ms-3">SupermercadosOsmar
+                <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
+            </h1>
+             </div>
+            <div class="col-12 col-md-6">
+                <nav class="navbar navbar-expand-lg bg-body">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-start" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="index.php">Hogar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="catalogo.php">Catálogo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="sobreNosotros.php">Quiénes somos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contactanos.php">Contáctenos</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <?php 
+                                            if (isset($_SESSION['nombre'])) {
+                                                echo $_SESSION['nombre'];
+                                            } else {
+                                                echo '<img src="img/perfil8.png" alt="" class="usuario" style="vertical-align: middle; width: 25px; height: 25px;">';
+                                            }
+                                        ?>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <?php 
+                                            if (isset($_SESSION['nombre'])) {
+                                                echo '<li><a class="dropdown-item" href="perfil.php">Perfil</a></li>';
+                                                echo '<li><a class="dropdown-item" href="login/controlador/controlador_cerrar_session.php">Salir</a></li>';
+                                            } else {
+                                                echo '<li><a class="dropdown-item" href="login/login.php">Iniciar sesión</a></li>';
+                                            }
+                                        ?>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<body>
+
+<div class="cart-container">
+      <a href="#" id="cart-icon">🛒 Carrito (<span id="cart-count">0</span>)</a>
+    </div>
+
+  <main>
+    <div class="product-container">
+    </div>
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
   </div>
-  
+</nav>
+<!--catalogo-->    
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    categorias
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Alimentos frescos</a></li>
+    <li><a class="dropdown-item" href="#">Productos de Panadería y Cereales</a></li>
+    <li><a class="dropdown-item" href="#">Alimentos procesados</a></li>
+    <li><a class="dropdown-item" href="#">Bebidas y snacks</a></li>
+    <li><a class="dropdown-item" href="#">Condimentos y cocina</a></li>
+    <li><a class="dropdown-item" href="#">Alimentos organicos y naturales</a></li>
+    <li><a class="dropdown-item" href="#">cuidado personal y hogar </a></li>
+    <li><a class="dropdown-item" href="#">Bebes </a></li>
+    <li><a class="dropdown-item" href="#">Mascotas </a></li>
+  </ul>
+</div>
 
- </header>
-
-    
-           
-
-
-<!--categorias -->
-
-
-<li class="dropdown__list">
-  <a href="#" class="dropdown__link">
-      <img src="img/categoria.png" class="dropdown__icon" style="vertical-align: middle; width: 20px; height: 20px;">
-      <span class="dropdown__span">Categorías</span>
-      <img src="img/chevron-double-down_7487183.png" class="dropdown__arrow" style="vertical-align: middle; width: 10px; height: 10px;">
-      <input type="checkbox" class="dropdown__check" id="dropdown-toggle" aria-label="Mostrar categorías">
-  </a>
-  
-</li>
-
-    <section class="contenedor">
-
-        <!-- Contenedor de elementos -->
-        <div class="contenedor-items">
-            <div class="item">
-                <p class="frutas"></p>
-                <span class="titulo-item">fresa</span>
-                <img src="img/fresa.png" alt="" class="img-item">
-                <span class="precio-item">$15.000</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">manzana</span>
-                <img src="img/manzana.png" alt="" class="img-item">
-                <span class="precio-item">$25.000</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">banano</span>
-                <img src="img/banano.png" alt="" class="img-item">
-                <span class="precio-item">$35.000</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">patilla</span>
-                <img src="img/patilla.png" alt="" class="img-item">
-                <span class="precio-item">$18.000</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item"> pera</span>
-                <img src="img/pera.png" alt="" class="img-item">
-                <span class="precio-item">$32.000</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">ceresas</span>
-                <img src="img/ceresas.png" alt="" class="img-item">
-                <span class="precio-item">$18.000</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">tomate</span>
-                <img src="img/tomate.png" alt="" class="img-item">
-                <span class="precio-item">$54.000</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">zanaoria</span>
-                <img src="img/zanaoria.png" alt="" class="img-item">
-                <span class="precio-item">$32.000</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item">
-                <span class="titulo-item">productos</span>
-                <img src="img/productos.png" alt="" class="img-item">
-                <span class="precio-item">$42.800</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
+<form action="#">
+    <div class="product" data-product-id="1">
+        <img src="img/banano.png" alt="banano">
+        <h2>banano</h2>
+        <p class="price">$15.000</p>
+        <div data-tooltip="Agregar al carrito" class="button" onclick="addToCart(1)">        
+        <div class="button-wrapper">
+          <div class="text">comprar</div>
+          <span class="icon">
+          <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+          </svg>
+          </span>
+          </div>
+          </div>
+      </div>
+      <div class="product" data-product-id="1">
+        <img src="img/fresa.png" alt="Fresa">
+        <h2>Fresa</h2>
+        <p class="price">$15.000</p>
+        <div data-tooltip="Agregar al carrito" class="button" onclick="addToCart(1)">        
+        <div class="button-wrapper">
+          <div class="text"> comprar</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+            </svg>
+          </span>
         </div>
-        <!-- Carrito de Compras -->
-        <div class="carrito" id="carrito">
-            <div class="header-carrito">
-                <h2>Tu Carro</h2>
-            </div>
-
-            <div class="carrito-items">
-                
-            </div>
-            <div class="carrito-total">
-                <div class="fila">
-                    <strong>Tu Total</strong>
-                    <span class="carrito-precio-total">
-                        $000
-                    </span>
-                </div>
-                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
-                <br>
-               
-                <a href="compras.html" class="btn-pagar">Ver carrito <i class="fa-solid fa-bag-shopping"></i></a>
-            </div>
+      </div>
+      </div><div class="product" data-product-id="1">
+        <img src="img/manzana.png" alt="Fresa">
+        <h2>Fresa</h2>
+        <p class="price">$15.000</p>
+        <div data-tooltip="Agregar al carrito" class="button" onclick="addToCart(1)">        
+        <div class="button-wrapper">
+          <div class="text">comprar</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+            </svg>
+          </span>
         </div>
-    </section>
+      </div>
+      </div>
+      <div class="product" data-product-id="1">
+        <img src="img/manzana.png" alt="Fresa">
+        <h2>Fresa</h2>
+        <p class="price">$15.000</p>
+        <div data-tooltip="Agregar al carrito" class="button" onclick="addToCart(1)">        
+        <div class="button-wrapper">
+          <div class="text">comprar</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+      </div><div class="product" data-product-id="1">
+        <img src="img/manzana.png" alt="Fresa">
+        <h2>Fresa</h2>
+        <p class="price">$15.000</p>
+        <div data-tooltip="Agregar al carrito" class="button" onclick="addToCart(1)">
+        <div class="button-wrapper">
+          <div class="text">comprar</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+      </div><div class="product" data-product-id="1">
+        <img src="img/manzana.png" alt="Fresa">
+        <h2>Fresa</h2>
+        <p class="price">$15.000</p>
+            <div data-tooltip="Agregar al carrito" class="button" onclick="addToCart(1)">        
+        <div class="button-wrapper">
+          <div class="text">comprar</div>
+          <span class="icon">
+            <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+      </div>
+  </main>
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Tu Carrito</h2>
+      <div id="cart-items"></div>
+      <p>Total: <span id="cart-total">$0.00</span></p>
+      <a href="compras.php">
+      <button id="checkout-button">abrir carro</button>
+      </a>
+    </div>
+  </div>
+ 
 
 
-
-
-
-    
-
-    
     <footer>
         <div class="footer1">
             <div class="contenedor-footer">
@@ -338,12 +395,9 @@ h78.747C231.693,100.736,232.77,106.162,232.77,111.694z"
 
 
     <button id="scrollToTopBtn" title="Subir hacia arriba"><img src="img/flecha-arriba.png" alt="23px" height="23px" width=""></button>
-     <script src="scripts.js"></script>
-   
+     <script src="js/scripts.js"></script>
+     <script src="js/carro.js"></script>
+     <script src="js/funcioncarro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
-
-
 </body>
 </html>

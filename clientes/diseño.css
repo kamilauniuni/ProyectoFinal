@@ -1,0 +1,108 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 600px) {
+    table, th, td {
+        display: block;
+    }
+    th, td {
+        width: 100%;
+    }
+}
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #fff; /* Fondo del navbar */
+}
+
+.navbar-toggler {
+    color: #000; /* Color del icono del botón del toggler */
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: #000; /* Color de los enlaces en el navbar */
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Color al pasar el mouse sobre los enlaces */
+}
+
+.dropdown-menu {
+    background-color: #fff; /* Fondo del menú desplegable */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra del menú desplegable */
+}
+
+.dropdown-item {
+    color: #000; /* Color de los items del menú desplegable */
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse sobre los items */
+    color: #007bff; /* Color del texto al pasar el mouse sobre los items */
+}
+
+/* Estilos para los botones */
+.btn {
+    margin-right: 10px; /* Margen derecho para los botones */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Color de fondo del botón peligro */
+    border-color: #dc3545; /* Color del borde del botón peligro */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Color de fondo al pasar el mouse sobre el botón peligro */
+    border-color: #bd2130; /* Color del borde al pasar el mouse sobre el botón peligro */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color de fondo del botón primario */
+    border-color: #007bff; /* Color del borde del botón primario */
+}
+
+.btn-primary:hover {
+    background-color: #0069d9; /* Color de fondo al pasar el mouse sobre el botón primario */
+    border-color: #0062cc; /* Color del borde al pasar el mouse sobre el botón primario */
+}

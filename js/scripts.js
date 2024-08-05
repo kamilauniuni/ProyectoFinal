@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("scroll", handleScroll);
 });
 
-
 function mostrarVentanaEmergente() {
     document.getElementById('ventanaEmergente').style.display = 'block';
   }

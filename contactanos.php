@@ -1,3 +1,49 @@
+<?php session_start(); ?>
+<?php 
+
+$database = 'supermercadoosmar';
+$user = 'root';
+$password = '';
+
+try {
+    $con = new PDO('mysql:host=localhost;dbname=' . $database, $user, $password);
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Error de conexión: " . $e->getMessage();
+    exit();
+}
+
+if(isset($_POST['contact'])){
+    if(
+        strlen($_POST['name']) >= 1 &&
+        strlen($_POST['email']) >= 1 &&
+        strlen($_POST['asunto']) >= 1 &&
+        strlen($_POST['message']) >= 1
+    ){
+        $name = trim($_POST['name']);
+        $email = trim($_POST['email']);
+        $asunto = trim($_POST['asunto']);
+        $message = trim($_POST['message']);
+        $fecha = date("d/m/y");
+
+        $consulta = "INSERT INTO datos (nombre, email, asunto, mensaje, fecha)
+                     VALUES (:name, :email, :asunto, :message, :fecha)";
+
+        $stmt = $con->prepare($consulta);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':asunto', $asunto);
+        $stmt->bindParam(':message', $message);
+        $stmt->bindParam(':fecha', $fecha);
+
+        if ($stmt->execute()) {
+            echo '<script>alert("Tu registro se ha completado");</script>';
+        } else {
+            echo '<script>alert("Ocurrió un error");</script>';
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,52 +55,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" herf="responsive.css" type="text/css">
 </head>
 <body>
-  <header>
-    <div class="titulo">
-      <h1>SupermercadosOsmar
-          <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
-      </h1>
-      <div class="menu">
-          <nav class="navbar navbar-expand-lg bg-body">
-              <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                      <ul class="navbar-nav">
-                          <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="index.html">Hogar</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="catalogo.html">Catálogo</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="sobreNosotros.html">Quiénes somos</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="contactanos.html">Contáctenos</a>
-                          </li>
-                          <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  <img src="img/perfil8.png" alt="" class="usuario" style="vertical-align: middle; width: 25px; height: 25px;">
-                              </a>
-                              <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="login/login.php">Iniciar sesión</a></li>
-                                  <li><a class="dropdown-item" href="index.html">Salir</a></li>
-                              </ul>
-                          </li>
-                      </ul>
-                      <img src="img/carro-de-la-compra.png" alt="Icono de Carrito" class="cart-icon" style="vertical-align: middle; width: 25px; height: 25px;">
-                  </div>
-              </div>
-          </nav>
-      </div>
-  </div>
-  
-
- </header>
+<header>
+<div class="container-fluid bg-white">
+        <div class="row align-items-center">
+        <div class="container-fluid bg-white">
+       <div class="row align-items-center">
+           <div class="col-12 col-md-6 text-start">
+            <h1 class="ms-3">SupermercadosOsmar
+                <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
+            </h1>
+             </div>
+            <div class="col-12 col-md-6">
+                <nav class="navbar navbar-expand-lg bg-body">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-start" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link " aria-current="page" href="index.php">Hogar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="catalogo.php">Catálogo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="sobreNosotros.php">Quiénes somos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="contactanos.php">Contáctenos</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <?php 
+                                            if (isset($_SESSION['nombre'])) {
+                                                echo $_SESSION['nombre'];
+                                            } else {
+                                                echo '<img src="img/perfil8.png" alt="" class="usuario" style="vertical-align: middle; width: 25px; height: 25px;">';
+                                            }
+                                        ?>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <?php 
+                                            if (isset($_SESSION['nombre'])) {
+                                                echo '<li><a class="dropdown-item" href="perfil.php">Perfil</a></li>';
+                                                echo '<li><a class="dropdown-item" href="login/controlador/controlador_cerrar_session.php">Salir</a></li>';
+                                            } else {
+                                                echo '<li><a class="dropdown-item" href="login/login.php">Iniciar sesión</a></li>';
+                                            }
+                                        ?>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
 
     <!-- informacion del header -->
     <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
@@ -93,8 +155,8 @@
                           
                     </div>
                 </div>
-                <!-- Formulario de comentarios de clientes -->
-                <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                 <!-- Formulario de comentarios de clientes -->
+                 <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -120,19 +182,15 @@
                             </div>
                             <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"> Horarios de atención</button>
 
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Horarios de atención</h5>
-    <button type="button" class="btn btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-
-
-
-
-  </div>
-  <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
-  </div>
-</div>
+                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                            <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Horarios de atención</h5>
+                            <button type="button" class="btn btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                             </div>
+                            <div class="offcanvas-body">
+                            <p>Try scrolling the rest of the page to see this option in action.</p>
+                            </div>
+                            </div>
                             
                         </div>
 
@@ -147,17 +205,15 @@
    
     </div>
 
- 
- 
-<br>
+
     <div class="container-xxl px-0 wow fadeIn" data-wow-delay="0.1s" style="margin-bottom: -6px;">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: -6px;">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.8760698323217!2d-75.20256749999997!3d4.43417210000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c4e0353161d3%3A0xa4f6438cb89a1a22!2sCl.%2059%20%233-65%2C%20La%20floresta%2C%20Ibagu%C3%A9%2C%20Tolima!5e0!3m2!1ses!2sco!4v1713295156937!5m2!1ses!2sco" 
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: -6px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31823.111455809896!2d-75.27688178916016!3d4.431782400000019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c4a2135a0127%3A0xf814ccc5173e689b!2sCra%208%20Sur%20%2320a-2%2C%20Ibagu%C3%A9%2C%20Tolima!5e0!3m2!1ses!2sco!4v1713295511646!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31823.111455809896!2d-75.27688178916016!3d4.431782400000019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c4a2135a0127%3A0xf814ccc5173e689b!2sCra%208%20Sur%20%2320a-2%2C%20Ibagu%C3%A9%2C%20Tolima!5e0!3m2!1ses!2sco!4v1713295511646!5m2!1ses!2sco" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
