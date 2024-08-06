@@ -51,7 +51,8 @@ if(isset($_POST['contact'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supermercados Osmar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="stilos.css">
+    <link rel="stylesheet" type="text/css" href="style/stilos.css">
+    <script></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -121,7 +122,7 @@ if(isset($_POST['contact'])){
     <!-- informacion del header -->
     <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
-            <h1 class="display-3 mb-3 animated slideInDown">Contactenos</h1>
+            <h1 class="h1">Contactenos</h1>
             <p>Inicio/Contactecnos</p>
             <nav aria-label="breadcrumb animated slideInDown">
                 
@@ -157,44 +158,39 @@ if(isset($_POST['contact'])){
                 </div>
                  <!-- Formulario de comentarios de clientes -->
                  <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                 <form name="formulario_contacto" method="post">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="nombre">
-                                    <label for="name">nombre</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="nombre" required>
+                                    <label for="name">Nombre *</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="correo">
-                                    <label for="email">correo</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="correo" required>
+                                    <label for="email">Correo *</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
+                                    <input type="text" class="form-control" id="asunto" name="asunto" placeholder="asunto" required>
+                                    <label for="asunto">Asunto *</label> 
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Deja un mensaje aquí" id="message" name="message" style="height: 200px" required></textarea>
                                     <label for="message">Mensaje</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-dark rounded-pill py-3 px-5" type="submit">enviar Mensaje</button>
+                                <button class="btn btn-dark rounded-pill py-3 px-5" type="submit" name="contact">Enviar Mensaje</button>
+                                
                             </div>
-                            <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"> Horarios de atención</button>
-
-                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                            <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Horarios de atención</h5>
-                            <button type="button" class="btn btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                             </div>
-                            <div class="offcanvas-body">
-                            <p>Try scrolling the rest of the page to see this option in action.</p>
-                            </div>
-                            </div>
-                            
                         </div>
-
                     </form>
+                    
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SupermercadosOsmar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="stilos.css">
+    <link rel="stylesheet" type="text/css" href="style/stilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
@@ -95,7 +95,7 @@
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                 </div>
-                <div class="story2">
+                <div class="d-flex justify-content-center">
                     <p>
                       A pesar de los desafíos diarios, estamos comprometidos y orgullosos de lo que hemos logrado, con entusiasmo por el futuro.
                     </p>
@@ -106,9 +106,12 @@
             <div class="container">
                 <h2>Nuestro equipo</h2>
                 <img src="img/WhatsApp Image 2024-05-22 at 10.11.29 PM.jpeg" alt="">
-                <p>
-                  En nuestro equipo, trabajamos unidos para superar desafíos y alcanzar metas comunes. Fomentamos la colaboración, el respeto y la innovación, valorando la contribución de cada miembro. Nos esforzamos por ofrecer resultados de alta calidad y superar las expectativas. Juntos, promovemos un ambiente de trabajo positivo y motivador, enfocado en el crecimiento continuo y el éxito compartido.
-                </p>
+                <div class="d-flex justify-content-center">
+                    <p >
+                    En nuestro equipo, trabajamos unidos para superar desafíos y alcanzar metas comunes. Fomentamos la colaboración, el respeto y la innovación, valorando la contribución de cada miembro. Nos esforzamos por ofrecer resultados de alta calidad y superar las expectativas. Juntos, promovemos un ambiente de trabajo positivo y motivador, enfocado en el crecimiento continuo y el éxito compartido.
+                    </p>
+                </div>
+                
             </div>
         </section>
     </main>
@@ -169,10 +172,7 @@
             max-width: 600px;
             height: auto;
         }
-        .story2 {
-            text-align: center;
-            padding: 20px;
-        }
+        
         .story p {
             margin-left: 700px;
             text-align: justify;
