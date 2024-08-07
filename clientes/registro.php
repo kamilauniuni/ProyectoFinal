@@ -1,5 +1,5 @@
 <?php
-$database = 'supermercadoosmar';
+$database = 'supermercado';
 $user = 'root';
 $password = '';
 

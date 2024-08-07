@@ -40,7 +40,7 @@ $conexion->close();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Perfil - SupermercadosOsmar</title>
+    <title>Mi Perfil - Supermercados</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="stilos.css">
     <link rel="stylesheet" type="text/css" href="clientes/diseño.css">
@@ -95,7 +95,7 @@ $conexion->close();
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-12 col-md-6 text-center text-md-left">
-                <h1>SupermercadosOsmar
+                <h1>Supermercados
                     <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
                 </h1>
             </div>

@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php 
 
-$database = 'supermercadoosmar';
+$database = 'supermercado';
 $user = 'root';
 $password = '';
 
@@ -49,9 +49,9 @@ if(isset($_POST['contact'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercados Osmar</title>
+    <title>Supermercados </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="stilos.css">
+    <link rel="stylesheet" type="text/css" href="style/stilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -64,7 +64,7 @@ if(isset($_POST['contact'])){
         <div class="container-fluid bg-white">
        <div class="row align-items-center">
            <div class="col-12 col-md-6 text-start">
-            <h1 class="ms-3">SupermercadosOsmar
+            <h1 class="ms-3">Supermercados
                 <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
             </h1>
              </div>
@@ -141,12 +141,12 @@ if(isset($_POST['contact'])){
                         <p class="mb-5"><i class="fa fa-phone-alt me-3"></i>+57 3142906070</p>
                         <p class="mb-5"><i class="fa fa-phone-alt me-3"></i>+57 3113006696</p>
                         <h5 class="text-white">Correos:</h5>
-                        <p class="mb-5"><i class="fa fa-envelope me-3"></i>supermercadosmar@gmail.com</p>
+                        <p class="mb-5"><i class="fa fa-envelope me-3"></i>supermercados@gmail.com</p>
                         <h5 class="text-white">Dirección:</h5>
                         <p class="mb-5"><i class="fa fa-map-marker-alt me-3"></i>Calle 59 # 3 - 65 B/ La floresta</p>
                         <p class="mb-5"><i class="fa fa-map-marker-alt me-3"></i>Manzana N casa 1 B/ Galan</p>
                         <!-- Enlace de Facebook -->
-                        <a href="https://web.facebook.com/supermercados.osmar.1" target="_blank">
+                        <a href="https://web.facebook.com/supermercados.1" target="_blank">
                             <div class="img">
                                 <img src="img/facebook (1).png" alt="Icono de Facebook" style="vertical-align: middle; width: 25px; height: 25px;">
                             </div>
@@ -223,7 +223,7 @@ if(isset($_POST['contact'])){
         <div class="footer1">
             <div class="contenedor-footer">
                 <div class="letra">
-                    <h6>SupermercadosOsmar</h6>
+                    <h6>Supermercados</h6>
                     <p>Tu destino de compras diarias.</p>
                     <img src="img/social.png" width="30px" height="30px" herf="">
                     <img src="img/sobre.png" width="30px" height="30px" herf="">

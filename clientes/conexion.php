@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$database = 'supermercadoosmar';
+$database = 'supermercado';
 $user = 'root';
 $password = '';
 

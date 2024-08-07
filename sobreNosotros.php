@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SupermercadosOsmar</title>
+    <title>Supermercados</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="stilos.css">
+    <link rel="stylesheet" type="text/css" href="style/stilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
         <div class="container-fluid bg-white">
        <div class="row align-items-center">
            <div class="col-12 col-md-6 text-start">
-            <h1 class="ms-3">SupermercadosOsmar
+            <h1 class="ms-3">Supermercados
                 <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
             </h1>
              </div>
@@ -80,7 +80,7 @@
                 <div>
                     <h2>Nuestra misión</h2>
                     <p>
-                      En Supermercados Osmar, nos dedicamos a ofrecer productos frescos y de calidad a precios justos. Buscamos proporcionar un servicio amable y eficiente en un ambiente acogedor. Nuestro objetivo es mejorar la vida de nuestros clientes y apoyar a la comunidad local. Priorizamos prácticas sostenibles y la promoción de valores inclusivos.
+                      En Supermercados, nos dedicamos a ofrecer productos frescos y de calidad a precios justos. Buscamos proporcionar un servicio amable y eficiente en un ambiente acogedor. Nuestro objetivo es mejorar la vida de nuestros clientes y apoyar a la comunidad local. Priorizamos prácticas sostenibles y la promoción de valores inclusivos.
                     </p>
                 </div>
                 <img src="img/Diseño sin título.png" alt="">
@@ -250,7 +250,7 @@
       <div class="footer1">
           <div class="contenedor-footer">
               <div class="letra">
-                  <h6>SupermercadosOsmar</h6>
+                  <h6>Supermercados</h6>
                   <p>Tu destino de compras diarias.</p>
                   <img src="img/social.png" width="30px" height="30px" herf="">
                   <img src="img/sobre.png" width="30px" height="30px" herf="">

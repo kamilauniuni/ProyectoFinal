@@ -4,7 +4,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, user-scalable=si, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-      <title>Supermercados Osmar</title>
+      <title>Supermercados </title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="style/stilos.css">
        <!--<link  rel="stylesheet" href="style/responsive.css" type="text/css">-->
@@ -21,7 +21,7 @@
         <div class="container-fluid bg-white">
        <div class="row align-items-center">
            <div class="col-12 col-md-6 text-start">
-            <h1 class="ms-3">SupermercadosOsmar
+            <h1 class="ms-3">Supermercados
                 <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
             </h1>
              </div>
@@ -102,18 +102,18 @@
             <div class="contenedor-sobre-nosotros">
                <img src="img/WhatsApp Image 2024-05-22 at 10.11.29 PM.jpeg" alt="" class="imagen-sobre-nosotros">
                <div class="contenido-textos">
-                  <p>El Supermercados Osmar se ha consolidado como una de las mejores opciones para los consumidores, no solo por su amplia variedad de productos y precios competitivos, sino también por su atención al cliente y su disposición a satisfacer las necesidades de todos sus visitantes.</p>
+                  <p>El Supermercados se ha consolidado como una de las mejores opciones para los consumidores, no solo por su amplia variedad de productos y precios competitivos, sino también por su atención al cliente y su disposición a satisfacer las necesidades de todos sus visitantes.</p>
                   <p>
                      <img src="img/doble-verificacion.png" alt="" width="20" height="20" >
-                     Iniciativas y Promociones Atractivas: Supermercados Osmar se destaca por ofrecer una variedad de sorteos y promociones.
+                     Iniciativas y Promociones Atractivas: Supermercados se destaca por ofrecer una variedad de sorteos y promociones.
                   </p>
                   <p>
                      <img src="img/doble-verificacion.png" alt="" width="20" height="23" style="margin-right: 6px;">
-                     Servicio de Entrega a Domicilio: Con el objetivo de brindar la máxima comodidad, el Supermercados Osmar ofrece un servicio de entrega a domicilio.
+                     Servicio de Entrega a Domicilio: Con el objetivo de brindar la máxima comodidad, el Supermercados  ofrece un servicio de entrega a domicilio.
                   </p>
                   <p>
                      <img src="img/doble-verificacion.png" alt="" width="20" height="23" style="margin-right: 6px;">
-                     Personal Amable y Capacitado: En el Supermercados Osmar, cada empleado es seleccionado y capacitado para brindar un servicio amable y eficiente.
+                     Personal Amable y Capacitado: En el Supermercados , cada empleado es seleccionado y capacitado para brindar un servicio amable y eficiente.
                   </p>
                </div>
             </div>
@@ -198,7 +198,7 @@
           <div id="ventanaEmergente" class="ventana-emergente">
             <span class="close" onclick="cerrarVentanaEmergente()">&times;</span>
             <h2>¿Tienes una sugerencia?</h2>
-            <p>Mándanos un correo a <a href="mailto:kamilau@gmial.com">supermercadososmar4@gmail.com</a> <img src="img/carrito-de-compras.gif" alt="" width="30px" height="30px"></p>
+            <p>Mándanos un correo a <a href="mailto:kamilau@gmial.com">supermercados4@gmail.com</a> <img src="img/carrito-de-compras.gif" alt="" width="30px" height="30px"></p>
           </div>
           <!-- Button trigger modal -->
           <!-- Modal -->
@@ -228,7 +228,7 @@
             <div class="footer1">
                <div class="contenedor-footer">
                   <div class="letra">
-                     <h6>SupermercadosOsmar</h6>
+                     <h6>Supermercados</h6>
                      <p>Tu destino de compras diarias.</p>
                      <img src="img/social.png" width="30px" height="30px" herf="">
                      <img src="img/sobre.png" width="30px" height="30px" herf="">
