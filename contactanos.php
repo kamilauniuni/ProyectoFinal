@@ -49,7 +49,7 @@ if(isset($_POST['contact'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercados Osmar</title>
+    <title>SuperSelect</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/stilos.css">
     <script></script>
@@ -65,7 +65,7 @@ if(isset($_POST['contact'])){
         <div class="container-fluid bg-white">
        <div class="row align-items-center">
            <div class="col-12 col-md-6 text-start">
-            <h1 class="ms-3">SupermercadosOsmar
+            <h1 class="ms-3">SuperSelect
                 <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
             </h1>
              </div>
@@ -142,7 +142,7 @@ if(isset($_POST['contact'])){
                         <p class="mb-5"><i class="fa fa-phone-alt me-3"></i>+57 3142906070</p>
                         <p class="mb-5"><i class="fa fa-phone-alt me-3"></i>+57 3113006696</p>
                         <h5 class="text-white">Correos:</h5>
-                        <p class="mb-5"><i class="fa fa-envelope me-3"></i>supermercadosmar@gmail.com</p>
+                        <p class="mb-5"><i class="fa fa-envelope me-3"></i>SuperSelect4@gmail.com</p>
                         <h5 class="text-white">Dirección:</h5>
                         <p class="mb-5"><i class="fa fa-map-marker-alt me-3"></i>Calle 59 # 3 - 65 B/ La floresta</p>
                         <p class="mb-5"><i class="fa fa-map-marker-alt me-3"></i>Manzana N casa 1 B/ Galan</p>
@@ -205,8 +205,8 @@ if(isset($_POST['contact'])){
     <div class="container-xxl px-0 wow fadeIn" data-wow-delay="0.1s" style="margin-bottom: -6px;">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: -6px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.8760698323217!2d-75.20256749999997!3d4.43417210000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c4e0353161d3%3A0xa4f6438cb89a1a22!2sCl.%2059%20%233-65%2C%20La%20floresta%2C%20Ibagu%C3%A9%2C%20Tolima!5e0!3m2!1ses!2sco!4v1713295156937!5m2!1ses!2sco" 
-                    width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15911.112972304452!2d-75.2528045755726!3d4.452305762052615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c487ff73cf91%3A0x4b728b314c6fc86!2sMinimercado%207%20De%20Agosto!5e0!3m2!1ses!2sco!4v1723577695418!5m2!1ses!2sco" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: -6px;">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31823.111455809896!2d-75.27688178916016!3d4.431782400000019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c4a2135a0127%3A0xf814ccc5173e689b!2sCra%208%20Sur%20%2320a-2%2C%20Ibagu%C3%A9%2C%20Tolima!5e0!3m2!1ses!2sco!4v1713295511646!5m2!1ses!2sco" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -219,7 +219,7 @@ if(isset($_POST['contact'])){
         <div class="footer1">
             <div class="contenedor-footer">
                 <div class="letra">
-                    <h6>SupermercadosOsmar</h6>
+                    <h6>SuperSelect</h6>
                     <p>Tu destino de compras diarias.</p>
                     <img src="img/social.png" width="30px" height="30px" herf="">
                     <img src="img/sobre.png" width="30px" height="30px" herf="">
@@ -372,10 +372,13 @@ h78.747C231.693,100.736,232.77,106.162,232.77,111.694z"
                     <p>>Soporte</p>
                 </div>
                 <div class="letra">
-                    <h5>Regístrate</h5>
-                    <p>Regístrate ahora y disfruta de beneficios exclusivos.</p>
-                    <button>Registrarse aquí</button>
+                    <?php if (!isset($_SESSION['nombre'])): ?>
+                        <h5>Regístrate</h5>
+                        <p>Regístrate ahora y disfruta de beneficios exclusivos.</p>
+                        <button><a class="dropdown-item" href="clientes_registro/registro.php">Registrarse aquí</a></button> <!-- Asegúrate de que el enlace vaya a tu página de registro -->
+                    <?php endif; ?>
                 </div>
+
                 
             </div>
         </div>

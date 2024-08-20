@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SupermercadosOsmar</title>
+    <title>SuperSelect</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/stilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,8 +19,7 @@
         <div class="container-fluid bg-white">
        <div class="row align-items-center">
            <div class="col-12 col-md-6 text-start">
-            <h1 class="ms-3">SupermercadosOsmar
-                <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
+            <h1 class="ms-3">SuperSelect                <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
             </h1>
              </div>
             <div class="col-12 col-md-6">
@@ -80,7 +79,7 @@
                 <div>
                     <h2>Nuestra misión</h2>
                     <p>
-                      En Supermercados Osmar, nos dedicamos a ofrecer productos frescos y de calidad a precios justos. Buscamos proporcionar un servicio amable y eficiente en un ambiente acogedor. Nuestro objetivo es mejorar la vida de nuestros clientes y apoyar a la comunidad local. Priorizamos prácticas sostenibles y la promoción de valores inclusivos.
+                    En Supermercado Select, nos dedicamos a ofrecer a nuestros clientes una experiencia de compra excepcional, basada en la confianza, la calidad y la innovación. Nuestro compromiso es brindar productos frescos, locales y sostenibles, garantizando la satisfacción total de nuestros clientes y contribuyendo al bienestar de la comunidad.
                     </p>
                 </div>
                 <img src="img/Diseño sin título.png" alt="">
@@ -105,12 +104,17 @@
         <section class="team">
             <div class="container">
                 <h2>Nuestro equipo</h2>
-                <img src="img/WhatsApp Image 2024-05-22 at 10.11.29 PM.jpeg" alt="">
-                <div class="d-flex justify-content-center">
-                    <p >
-                    En nuestro equipo, trabajamos unidos para superar desafíos y alcanzar metas comunes. Fomentamos la colaboración, el respeto y la innovación, valorando la contribución de cada miembro. Nos esforzamos por ofrecer resultados de alta calidad y superar las expectativas. Juntos, promovemos un ambiente de trabajo positivo y motivador, enfocado en el crecimiento continuo y el éxito compartido.
-                    </p>
+                <img src="img/equipo.jpg" alt="">
+                <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-sm-10">
+                        <p class="text-center">
+                            En nuestro equipo, trabajamos unidos para superar desafíos y alcanzar metas comunes. Fomentamos la colaboración, el respeto y la innovación, valorando la contribución de cada miembro. Nos esforzamos por ofrecer resultados de alta calidad y superar las expectativas. Juntos, promovemos un ambiente de trabajo positivo y motivador, enfocado en el crecimiento continuo y el éxito compartido.
+                        </p>
+                    </div>
                 </div>
+            </div>
+
                 
             </div>
         </section>
@@ -250,7 +254,7 @@
       <div class="footer1">
           <div class="contenedor-footer">
               <div class="letra">
-                  <h6>SupermercadosOsmar</h6>
+                  <h6>SuperSelect</h6>
                   <p>Tu destino de compras diarias.</p>
                   <img src="img/social.png" width="30px" height="30px" herf="">
                   <img src="img/sobre.png" width="30px" height="30px" herf="">
@@ -403,10 +407,13 @@ h78.747C231.693,100.736,232.77,106.162,232.77,111.694z"
                   <p>>Soporte</p>
               </div>
               <div class="letra">
-                  <h5>Regístrate</h5>
-                  <p>Regístrate ahora y disfruta de beneficios exclusivos.</p>
-                  <button>Registrarse aquí</button>
-              </div>
+                    <?php if (!isset($_SESSION['nombre'])): ?>
+                        <h5>Regístrate</h5>
+                        <p>Regístrate ahora y disfruta de beneficios exclusivos.</p>
+                        <button><a class="dropdown-item" href="clientes_registro/registro.php">Registrarse aquí</a></button> <!-- Asegúrate de que el enlace vaya a tu página de registro -->
+                    <?php endif; ?>
+                </div>
+
               
           </div>
       </div>

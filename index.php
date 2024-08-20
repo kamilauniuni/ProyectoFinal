@@ -1,4 +1,25 @@
 <?php session_start(); ?>
+<?php
+// Conexión a la base de datos
+$servername = "localhost";
+$database = "supermercadoosmar";
+$user = "root";
+$password = "";
+
+$conn = new mysqli($servername, $user, $password, $database);
+
+// Verifica la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Consulta para obtener los datos
+$sql = "SELECT nombre, mensaje FROM datos";
+$result = $conn->query($sql);
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -21,7 +42,7 @@
         <div class="container-fluid bg-white">
        <div class="row align-items-center">
            <div class="col-12 col-md-6 text-start">
-            <h1 class="ms-3">SupermercadosOsmar
+            <h1 class="ms-3">SuperSelect
                 <img src="img/carrito-de-compras (1).png" alt="Icono" style="vertical-align: middle; width: 35px; height: 35px;">
             </h1>
              </div>
@@ -100,9 +121,9 @@
          <section class="clientes">
             <h3 class="titulo1">LA MEJOR ATENCIÓN Y DISPOSICIÓN</h3>
             <div class="contenedor-sobre-nosotros">
-               <img src="img/WhatsApp Image 2024-05-22 at 10.11.29 PM.jpeg" alt="" class="imagen-sobre-nosotros">
+               <img src="img/lamejorimagen.jpg" alt="" class="imagen-sobre-nosotros">
                <div class="contenido-textos">
-                  <p>El Supermercados Osmar se ha consolidado como una de las mejores opciones para los consumidores, no solo por su amplia variedad de productos y precios competitivos, sino también por su atención al cliente y su disposición a satisfacer las necesidades de todos sus visitantes.</p>
+                  <p>El SuperSelect se ha consolidado como una de las mejores opciones para los consumidores, no solo por su amplia variedad de productos y precios competitivos, sino también por su atención al cliente y su disposición a satisfacer las necesidades de todos sus visitantes.</p>
                   <p>
                      <img src="img/doble-verificacion.png" alt="" width="20" height="20" >
                      Iniciativas y Promociones Atractivas: Supermercados Osmar se destaca por ofrecer una variedad de sorteos y promociones.
@@ -120,115 +141,111 @@
          </section>
       </div>
       <section>
-  <div>
-    <div class="carousel-container">
-      <div class="cards">
-        <section class="Opinion">
-          <h2 class="titulo2">OPINIÓN DE NUESTROS CLIENTES</h2>
-          <p>"La opinión de nuestros clientes es fundamental para nuestra empresa.<br> Escuchar sus comentarios nos permite mejorar continuamente." </p>
-          <br>       
-          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="d-flex flex-wrap">
-                  <div class="card m-2">
-                    <img src="img/comillas-izquierdas (4).png" alt="" class="comillas" width="30px">
-                    <div class="contenido-texto1">
-                    <img src="img/carlos.jpg" alt="" width="120px" height="100px" class="img-fluid">
-                    <h4 class="text-dark fw-semibold">Carlos Alberto</h4>
-                    <p class="text-dark fs-35 fw-semibold" style="color: black;">Hace un mes que compré este producto y no puedo estar más feliz con mi elección. Desde el momento en que lo recibí, supe que había hecho una compra acertada. Este producto ha superado todas mis expectativas.</p>
-                    </div>
-                  </div>
-                  <div class="card m-2">
-                    <div class="contenido-texto1">
-                      <img src="img/don alberto.jpg" alt="" width="120px" height="120px" class="img-fluid">
-                      <h4>Don alberto</h4>
-                      <p>Hace un mes que compré este producto y no puedo estar más feliz con mi elección. Desde el momento en que lo recibí, supe que había hecho una compra acertada. Este producto ha superado todas mis expectativas.</p>
-                    </div>
-                  </div>
-                  <div class="card m-2 ">
-    <img src="img/comillas-izquierdas (4).png" alt="" class="comillas" width="30px">
-    <div class="contenido-texto1">
-        <img src="img/carlos.jpg" alt="" width="120px" height="100px" class="img-fluid">
-        <h4 class="text-dark fw-semibold">Carlos Alberto</h4>
-        <p class="text-dark fs-35 fw-semibold" style="color: black;">Hace un mes que compré este producto y no puedo estar más feliz con mi elección. Desde el momento en que lo recibí, supe que había hecho una compra acertada. Este producto ha superado todas mis expectativas.</p>
-    </div>
+         <div>
+            <div class="carousel-container">
+               <div class="cards">
+               <section class="Opinion">
+                  <h2 class="titulo2">OPINIÓN DE NUESTROS CLIENTES</h2>
+                  <p>
+                     "La opinión de nuestros clientes es fundamental para nuestra empresa.
+                     <br> Escuchar sus comentarios nos permite mejorar continuamente."
+                  </p>
+                  <br>       
+                  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+   <div class="carousel-inner">
+      <?php
+      // Conexión a la base de datos
+      $servername = "localhost";
+      $database = "supermercadoosmar";
+      $user = "root";
+      $password = "";
+
+      $conn = new mysqli($servername, $user, $password, $database);
+
+      // Verifica la conexión
+      if ($conn->connect_error) {
+          die("Conexión fallida: " . $conn->connect_error);
+      }
+
+      // Consulta para obtener los datos de la tabla 'datos'
+      $sql = "SELECT nombre, mensaje FROM datos";
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+          $first = true;
+          while($row = $result->fetch_assoc()) {
+              echo '<div class="carousel-item ' . ($first ? 'active' : '') . '">';
+              echo '   <div class="d-flex justify-content-center">';
+              echo '      <div class="card m-2" style="background-color: #2E2E2E; color: white; max-width: 500px; border-radius: 10px;">';  // Fondo gris oscuro, texto blanco, y bordes redondeados
+              
+              echo '         <div class="contenido-texto1">';
+              echo '            <img src="img/perfil2.jpg" alt="" width="120px" height="100px" class="img-fluid">';
+              echo '            <h4 class="text-light fw-semibold">' . htmlspecialchars($row["nombre"]) . '</h4>';
+              echo '            <p class="text-light fs-35 fw-semibold" style="color: white;">' . htmlspecialchars($row["mensaje"]) . '</p>';
+              echo '         </div>';
+              echo '      </div>';
+              echo '   </div>';
+              echo '</div>';
+              $first = false;
+          }
+      } else {
+          echo '<p>No hay opiniones disponibles.</p>';
+      }
+
+      $conn->close();
+      ?>
+   </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+   </button>
 </div>
 
 
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-flex flex-wrap">
-                  <div class="card m-2">
-                    <img src="img/comillas-izquierdas (4).png" alt="" class="comillas" width="30px">
-                    <div class="contenido-texto1">
-                      <img src="img/angir.jpg" alt="" width="120px" height="100px" class="img-fluid">
-                      <h4 class="text-dark fw-semibold">Angie Montes</h4>
-                      <p class="text-dark fw-semibold">Hace un mes que compré este producto y no puedo estar más feliz con mi elección. Desde el momento en que lo recibí, supe que había hecho una compra acertada. Este producto ha superado todas mis expectativas.</p>
-                    </div>
+
+
+                  <div id="ventanaEmergente" class="ventana-emergente">
+                     <span class="close" onclick="cerrarVentanaEmergente()">&times;</span>
+                     <h2>¿Tienes una sugerencia?</h2>
+                     <p>
+                     Mándanos un correo a <a href="mailto:kamilau@gmial.com">SuperSelect4@gmail.com</a> 
+                     <img src="img/carrito-de-compras.gif" alt="" width="30px" height="30px">
+                     </p>
                   </div>
-                  <div class="card m-2">
-                    <div class="contenido-texto1">
-                      <img src="img/parrs.jpg" alt="" width="120px" height="100px" class="img-fluid">
-                      <h4>Brahian parra</h4>
-                      <p>Hace un mes que compré este producto y no puedo estar más feliz con mi elección. Desde el momento en que lo recibí, supe que había hecho una compra acertada. Este producto ha superado todas mis expectativas.</p>
-                    </div>
+                  <!-- Button trigger modal -->
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                     <div class="modal-dialog">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                           <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           ...
+                        </div>
+                        <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                     </div>
+                     </div>
                   </div>
-                  <div class="card m-2">
-                    <img src="img/comillas-izquierdas (4).png" alt="" class="comillas" width="30px">
-                    <div class="contenido-texto1">
-                      <img src="img/carlos.jpg" alt="" width="120px" height="100px" class="img-fluid">
-                      <h4 class="text-dark fw-semibold">Carlos Alberto</h4>
-        <p class="text-dark fs-35 fw-semibold" style="color: black;">Hace un mes que compré este producto y no puedo estar más feliz con mi elección. Desde el momento en que lo recibí, supe que había hecho una compra acertada. Este producto ha superado todas mis expectativas.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+               </section>
+               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-          <div id="ventanaEmergente" class="ventana-emergente">
-            <span class="close" onclick="cerrarVentanaEmergente()">&times;</span>
-            <h2>¿Tienes una sugerencia?</h2>
-            <p>Mándanos un correo a <a href="mailto:kamilau@gmial.com">supermercadososmar4@gmail.com</a> <img src="img/carrito-de-compras.gif" alt="" width="30px" height="30px"></p>
-          </div>
-          <!-- Button trigger modal -->
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
-</section>
+         </div>
+      </section>
+
          <footer>
             <div class="footer1">
                <div class="contenedor-footer">
                   <div class="letra">
-                     <h6>SupermercadosOsmar</h6>
+                     <h6>SuperSelect</h6>
                      <p>Tu destino de compras diarias.</p>
                      <img src="img/social.png" width="30px" height="30px" herf="">
                      <img src="img/sobre.png" width="30px" height="30px" herf="">
@@ -377,10 +394,13 @@
                      <p>>Soporte</p>
                   </div>
                   <div class="letra">
-                     <h5>Regístrate</h5>
-                     <p>Regístrate ahora y disfruta de beneficios exclusivos.</p>
-                     <button><a class="dropdown-item" href="login/index.html">Registrarse</a></button>
-                  </div>
+                    <?php if (!isset($_SESSION['nombre'])): ?>
+                        <h5>Regístrate</h5>
+                        <p>Regístrate ahora y disfruta de beneficios exclusivos.</p>
+                        <button><a class="dropdown-item" href="clientes_registro/registro.php">Registrarse aquí</a></button> <!-- Asegúrate de que el enlace vaya a tu página de registro -->
+                    <?php endif; ?>
+                </div>
+
                </div>
             </div>
             <h6 class="titulo-final">&copy; Ibagué-Tolima, Bienvenidos</h6>

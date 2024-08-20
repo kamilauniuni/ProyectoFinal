@@ -1,0 +1,163 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Header */
+h2 {
+    font-size: 1.8rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+th {
+    background-color: #343a40;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Buttons */
+.btn__update, .btn__delete {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 4px 2px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn__update {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn__delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    table, th, td {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .btn__update, .btn__delete {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding: 0;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    table, th, td {
+        font-size: 0.9rem;
+        padding: 8px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    tr {
+        display: block;
+        width: 150%;
+        margin-bottom: 10px;
+    }
+
+    td {
+        display: block;
+        text-align: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 5px;
+        color: #343a40;
+    }
+
+    td:last-child {
+        border-bottom: 2px solid #343a40;
+    }
+
+    .btn__update, .btn__delete {
+        width: calc(100% - 12px); /* Ocupa todo el ancho menos un pequeño margen */
+        margin: 5px 6px;
+        font-size: 0.9rem;
+    }
+
+    .btn__update, .btn__delete {
+        margin: 5px 0;
+    }
+}
